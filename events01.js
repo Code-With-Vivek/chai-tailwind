@@ -8,8 +8,8 @@ const customMap = {
 console.log(document.querySelectorAll("[class]"))
 
 document.querySelectorAll("[class]").forEach((el) => {
-	el.style = customMap[el.className];
-	console.log(el.className)
-}
-)
+
+	el.classList.forEach((cls) => { el.style.cssText += customMap[cls] })
+
+});
 
